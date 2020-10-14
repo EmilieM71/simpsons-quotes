@@ -2,17 +2,17 @@ import React from 'react';
 import './QuoteCards.css'
 
 
-function QoteCards () {
+function QoteCards (props) {
   return (
-    <figure class="QuoteCard">
+    <figure className="QuoteCard">
       <img
-      src="https://pm1.narvii.com/7070/aeaeadea89d89327a8e5f4f83d10272dc337425fr1-1200-1200v2_128.jpg"
-      alt="Nelson Muntz"/>
+      src={props.user.author.image}
+      alt={props.user.author.character}/>
       <figcaption>
         <blockquote>
-          Shoplifting is a victimless crime, like punching someone in the dark.
+        {props.user.quote}
         </blockquote>
-        <cite>Nelson Muntz</cite>
+        <cite>{props.user.author.character}</cite>
       </figcaption>
     </figure>
   );
