@@ -1,18 +1,13 @@
-import React from 'react';
-import './QuoteCards.css'
+import React from "react";
+import "./QuoteCards.css";
 
-
-function QoteCards (props) {
+function QoteCards({ quotes }) {
   return (
     <figure className="QuoteCard">
-      <img
-      src={props.user.author.image}
-      alt={props.user.author.character}/>
+      <img src={quotes.image} alt={quotes.character} />
       <figcaption>
-        <blockquote>
-        {props.user.quote}
-        </blockquote>
-        <cite>{props.user.author.character}</cite>
+        <blockquote>{quotes.quote}</blockquote>
+        <cite>{quotes.character}</cite>
       </figcaption>
     </figure>
   );
